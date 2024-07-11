@@ -8,7 +8,7 @@ public class kouhan {
 	public static void showMondokoro() throws Exception {
 		System.out.println("飛車さん、角さん。もういいでしょう。");
 		System.out.println("この紋所が目にはいらぬか！");
-		Thread.sleep(3000);
+		Thread.sleep(3000);// 6-3
 		zenhan.doTogame(); // もう一度、とがめる
 	}
 

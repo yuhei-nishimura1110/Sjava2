@@ -1,8 +1,21 @@
 package main;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import RPG.Hero;
+import comment.zenhan;
+
 public class main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO 自動生成されたメソッド・スタブ
 		// 1-1
 		System.out.println(
@@ -184,10 +197,89 @@ public class main {
 		c(2);
 
 		// 6-1
+		zenhan.doWarusa();
+		zenhan.doTogame();
+		comment.kouhan.callDeae();
+		comment.kouhan.showMondokoro();
+
 		// 6-2
 		// 6-3
 		// 6-4
 		// 6-5
+		// 10-1
+		RPG.Hero h = new RPG.Hero("fadhfihfkjhajk");
+		// 12-3
+		tanoutai.Y[] y = new tanoutai.Y[2];
+		y[0] = new tanoutai.A();
+		y[1] = new tanoutai.B();
+		for (tanoutai.Y i : y) {
+			i.b();
+
+		}
+		// 15-1
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < 100; i++) {
+			sb.append((i + 1) + ",");
+		}
+		String s = sb.toString();
+		String[] a = s.split(",");
+
+		// 15-3
+		// .*
+		// A\d{1,2}
+		// U[A-Z]{3}
+
+		// 15-4
+		Date now = new Date();
+		Calendar c = Calendar.getInstance();
+		c.setTime(now);
+		int day = c.get(Calendar.DAY_OF_MONTH);
+		day += 100;
+		c.set(Calendar.DAY_OF_MONTH, day);
+		Date future = c.getTime();
+		SimpleDateFormat f = new SimpleDateFormat("西暦ｙｙｙｙ年ｍｍ月ｄｄ日");
+		System.out.println(f.format(future));
+
+		// 15-5
+		LocalDate now155 = LocalDate.now();
+		LocalDate future155 = now155.plusDays(100);
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("西暦ｙｙｙｙ年ｍｍ月ｄｄ日");
+		System.out.println(future155.format(fmt));
+
+		// 16-2
+		RPG.Hero h1 = new RPG.Hero("斎藤");
+		RPG.Hero h2 = new RPG.Hero("鈴木");
+		List<Hero> heroes = new ArrayList<Hero>();
+		heroes.add(h1);
+		heroes.add(h2);
+		for (Hero h16 : heroes) {
+			System.out.println(h.getName());
+		}
+
+		// 16-3
+		Map<Hero, Integer> heroes2 = new HashMap<Hero, Integer>();
+		heroes2.put(h1, 3);
+		heroes2.put(h2, 7);
+		for (Hero key : heroes2.keySet()) {
+			int value = heroes2.get(key);
+			System.out.println(key.getName() + "が倒した敵は" + value);
+		}
+		// １７
+		try {
+			String s17 = null;
+			System.out.println(s17.length());
+		} catch (NullPointerException e) {
+			System.out.println("NullPointerException例外をcatchしました");
+			System.out.println("--スタックトレース（ここから）--");
+			e.printStackTrace();
+			System.out.println("--スタックトレース（ここまで）--");
+		}
+
+		try {
+			int i = Integer.parseInt("三");
+		} catch (NumberFormatException e) {
+			System.out.println("NumberFormatException例外をcatchしました。");
+		}
 
 	}
 
@@ -219,5 +311,13 @@ public class main {
 	public static double c(double radius) {
 		double menseki = radius * radius * 3.14;
 		return menseki;
+	}
+
+	// 15-2
+	public String concatPath(String folder, String file) {
+		if (!folder.endsWith("\\")) {
+			folder += "\\";
+		}
+		return folder + file;
 	}
 }
