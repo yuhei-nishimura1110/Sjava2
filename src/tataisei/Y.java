@@ -1,4 +1,4 @@
-package tanoutai;
+package tataisei;
 
 public abstract class Y implements X {
 	public abstract void a();

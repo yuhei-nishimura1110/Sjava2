@@ -209,10 +209,10 @@ public class main {
 		// 10-1
 		RPG.Hero h = new RPG.Hero("fadhfihfkjhajk");
 		// 12-3
-		tanoutai.Y[] y = new tanoutai.Y[2];
-		y[0] = new tanoutai.A();
-		y[1] = new tanoutai.B();
-		for (tanoutai.Y i : y) {
+		tataisei.Y[] y = new tataisei.Y[2];
+		y[0] = new tataisei.A();
+		y[1] = new tataisei.B();
+		for (tataisei.Y i : y) {
 			i.b();
 
 		}

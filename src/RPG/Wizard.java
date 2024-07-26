@@ -43,7 +43,7 @@ public class Wizard {
 
 	public void setName(String a) {
 		if (a == null || name.length() < 3) {
-			System.out.println("名前を長くしてください");
+			throw new IllegalArgumentException("正しく設定してください");
 		} else {
 			this.name = a;
 		}
@@ -55,7 +55,7 @@ public class Wizard {
 
 	public void setWand(Wand a) {
 		if (a == null) {
-			System.out.println("杖を設定してください");
+			throw new IllegalArgumentException("正しく設定してください");
 		} else {
 			this.wand = a;
 		}

@@ -14,7 +14,7 @@ public class Wand {
 
 	public void setName(String a) {
 		if (a == null || a.length() < 3) {
-			System.out.println("名前を長くしてください");
+			throw new IllegalArgumentException("正しく設定してください");
 		} else {
 			this.name = a;
 		}
@@ -22,7 +22,7 @@ public class Wand {
 
 	public void setPower(double a) {
 		if (a < 0.5 || a > 100.0) {
-			System.out.println("正しく設定してください");
+			throw new IllegalArgumentException("正しく設定してください");
 		} else {
 			this.power = a;
 		}

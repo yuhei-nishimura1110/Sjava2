@@ -1,4 +1,4 @@
-package tanoutai;
+package tataisei;
 
 public class B extends Y {
 	public void a() {
